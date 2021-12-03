@@ -45,8 +45,6 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     id=models.AutoField(primary_key=True)
     name = models.CharField(_('name'), max_length=50, blank=True)
     mobile = models.CharField(_('mobile'), unique=True, max_length=10, blank=False)
-    # mobile=  models.CharField(primary_key=True , max_length=10, validators=[RegexValidator(r'^\d{1,10}$')])
-    # mobile= models.IntegerField(validators=[MinValueValidator(10),MaxValueValidator(10)])
     email = models.EmailField(_('email address'), blank=True)
     password = models.CharField(_('password'),max_length=25,blank=False)
     date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
@@ -62,13 +60,6 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         ('F', 'Female'),
     )
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-
-    # class Meta:
-    #     permissions = (
-    #         ("hospital_registartion_access", "hospital_registartion_access"),
-    #         ("education_access", "education_access"),("doctor_fees_access", "doctor_fees_access"),
-    #          ("doctor_specilizations_access", "doctor_specilizations_access")
-    #     )
 
     objects = UserManager()
 

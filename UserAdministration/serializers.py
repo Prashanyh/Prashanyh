@@ -62,4 +62,3 @@ class LoginSerializer(serializers.ModelSerializer):
             'tokens':user.tokens
         }
 
-        # return super().validate(attrs)
