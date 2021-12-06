@@ -42,7 +42,7 @@ class UserManager(BaseUserManager):
 
 import uuid
 class UserProfile(AbstractBaseUser, PermissionsMixin):
-    id=models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     name = models.CharField(_('name'), max_length=50, blank=True)
     mobile = models.CharField(_('mobile'), unique=True, max_length=10, blank=False)
     email = models.EmailField(_('email address'), blank=True)
@@ -54,7 +54,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     is_manager = models.BooleanField(_('active'), default=False)
     is_tl = models.BooleanField(_('active'), default=False)
     is_agent = models.BooleanField(_('active'), default=False)
-    dob=models.DateField()
+    dob = models.DateField()
     GENDER_CHOICES = (
         ('M', 'Male'),
         ('F', 'Female'),
@@ -106,8 +106,10 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
 
     def tokens(self):
-        refresh=RefreshToken.for_user(self)
+        refresh = RefreshToken.for_user(self)
         return {
             'refresh':str(refresh),
             'access':str(refresh.access_token)
         }
+
+

@@ -5,7 +5,6 @@ from rest_framework import generics
 from .serializers import *
 
 
-
 class RegisterApi(generics.GenericAPIView):
     serializer_class = UserSerializer
     authentication_classes = []
@@ -28,3 +27,4 @@ class LoginAPIView(generics.GenericAPIView):
         serializer=self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
+
