@@ -31,7 +31,7 @@ jobs:
   UniTest:
     name: Backend-test 
     if: github.event_name == 'pull_request'
-    needs: [Build]
+    needs: [DeployDev]
     runs-on: ubuntu-latest
     environment: 
       name: Testing
@@ -44,7 +44,7 @@ jobs:
   End-to-End-Approve:
     name: Test approve 
     if: github.event_name == 'pull_request'
-    needs: [Build]
+    needs: [UniTest]
     runs-on: ubuntu-latest
     environment: 
       name: Approve
@@ -57,7 +57,7 @@ jobs:
   DeployStaging:
     name: Deploy to Staging 
     if: github.event.ref == 'refs/heads/main'
-    needs: [Build]
+    needs: [End-to-End-Approve]
     runs-on: ubuntu-latest
     environment: 
       name: Staging
