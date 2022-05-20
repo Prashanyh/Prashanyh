@@ -28,7 +28,9 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
-
-  
- 
-
+        
+        
+defaults:
+  run:
+    shell: ubuntu-latest
+      
