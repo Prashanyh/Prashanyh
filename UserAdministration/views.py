@@ -3,6 +3,8 @@ from rest_framework.response import Response
 from rest_framework import status,views
 from rest_framework import generics
 from .serializers import *
+from rest_framework.views import APIView
+
 
 
 class RegisterApi(generics.GenericAPIView):
