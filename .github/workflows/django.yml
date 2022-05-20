@@ -29,8 +29,9 @@ jobs:
       run: |
         python manage.py test
         
+    - name: UAT 
         
-defaults:
-  run:
-    shell: ubuntu-latest
+        
+        
+
       
