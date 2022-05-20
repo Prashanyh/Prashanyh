@@ -27,6 +27,32 @@ jobs:
     steps:
       - name: Deploy
         run: echo I am deploying! 
+        
+  UniTest:
+    name: Backend-test 
+    if: github.event_name == 'pull_request'
+    needs: [Build]
+    runs-on: ubuntu-latest
+    environment: 
+      name: Testing
+      url: 'na'
+    steps:
+      - name: test cases
+        run: echo I am deploying! 
+        
+        
+  End-to-End-Approve:
+    name: Test approve 
+    if: github.event_name == 'pull_request'
+    needs: [Build]
+    runs-on: ubuntu-latest
+    environment: 
+      name: Approve
+      url: 'na'
+    steps:
+      - name: approve
+        run: echo I am deploying! 
+        
     
   DeployStaging:
     name: Deploy to Staging 
