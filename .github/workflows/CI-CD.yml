@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Development
-      url: 'http://dev.myapp.com'
+      url: 'na'
     steps:
       - name: Deploy
         run: echo I am deploying! 
@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Staging
-      url: 'http://test.myapp.com'
+      url: 'na'
     steps:
       - name: Deploy
         run: echo I am deploying! 
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Production
-      url: 'http://www.myapp.com'
+      url: 'na'
     steps:
       - name: Deploy
         run: echo I am deploying! 
