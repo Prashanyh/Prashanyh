@@ -8,7 +8,7 @@ on:
 
 jobs:
   test_django:
-    uses: prashanyh/prashanyh/.github/workflows/django-test.yaml@main
+    uses: prashanyh/.github/workflows/django-test.yaml@main
   container_builder:
     runs-on: ubuntu-latest
     needs: [test_django]
