@@ -9,7 +9,7 @@ django-js-asset==1.2.2
 django-mptt==0.13.4
 djangorestframework==3.12.4
 djangorestframework-jwt==1.11.0
-djangorestframework-simplejwt==4.5.0
+djangorestframework-simplejwt==4.0.0
 et-xmlfile==1.1.0
 MarkupPy==1.14
 numpy==1.19.5
