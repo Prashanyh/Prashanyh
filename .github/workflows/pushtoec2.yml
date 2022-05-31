@@ -18,6 +18,6 @@ jobs:
 #           SOURCE: "./"
           REMOTE_HOST: "100.26.143.200"
           REMOTE_USER: "ec2-user"
-          IdentityFile: "C:/Users/DELL/Downloads/arxt/credentials/devlopement-linux.pem"
+          IdentityFile: "[C:/Users/DELL/Downloads/arxt/credentials/devlopement-linux.pem]/.ssh/id_rsa.pub"
 #           IdentityFile: "/home/ec2-user/.ssh/id_rsa.pub"
 #           TARGET: "/home/ec2-user/hyd_prashanth"
