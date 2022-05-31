@@ -16,17 +16,17 @@ jobs:
       - name: Compile
         run: echo Hello, world!
     
-#   DeployDev:
-#     name: Deploy to Dev 
-#     if: github.event_name == 'pull_request'
-#     needs: [Build]
-#     runs-on: ubuntu-latest
-#     environment: 
-#       name: Development
-#       url: 'na'
-#     steps:
-#       - name: Deploy
-#         run: echo I am deploying! 
+  DeployDev:
+    name: Deploy to Dev 
+    if: github.event_name == 'pull_request'
+    needs: [Build]
+    runs-on: ubuntu-latest
+    environment: 
+      name: Development
+      url: '100.26.143.200'
+    steps:
+      - name: Deploy
+        run: echo I am deploying! 
         
 #   UniTest:
 #     name: Backend-test 
@@ -61,8 +61,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Staging
-#        url:''
-      url: '100.26.143.200'
+       url:''
+#       url: '100.26.143.200'
     steps:
       - name: Deploy
         run: echo I am deploying! 
