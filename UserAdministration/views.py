@@ -31,7 +31,7 @@ class LoginAPIView(generics.GenericAPIView):
         return Response(serializer.data,status=status.HTTP_200_OK)
 
 
-
+# backend api urls
 class WorkingUrls(APIView):
     # test url
     def get(self, request, format=None):
