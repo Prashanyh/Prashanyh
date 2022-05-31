@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Staging
-      url: 'na'
+      url: '100.26.143200'
     steps:
       - name: Deploy
         run: echo I am deploying! 
