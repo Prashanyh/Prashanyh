@@ -54,22 +54,22 @@ jobs:
 #         run: echo I am deploying! 
         
     
-  DeployStaging:
-    name: Deploy to Staging 
-    if: github.event.ref == 'refs/heads/main'
-    needs: [Build]
-    runs-on: ubuntu-latest
-    environment: 
-      name: Staging
-       url:''
-#       url: '100.26.143.200'
-    steps:
-      - name: Deploy
-        run: echo I am deploying! 
+#   DeployStaging:
+#     name: Deploy to Staging 
+#     if: github.event.ref == 'refs/heads/main'
+#     needs: [Build]
+#     runs-on: ubuntu-latest
+#     environment: 
+#       name: Staging
+#        url:''
+# #       url: '100.26.143.200'
+#     steps:
+#       - name: Deploy
+#         run: echo I am deploying! 
             
   DeployProd:
     name: Deploy to Production 
-    needs: [DeployStaging]
+    needs: [DeployDev]
     runs-on: ubuntu-latest
     environment: 
       name: Production
