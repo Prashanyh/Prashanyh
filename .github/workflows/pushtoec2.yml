@@ -16,7 +16,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 #           SOURCE: "./"
-          REMOTE_HOST: "ssh -i ec2-user@100.26.143.200"
+          REMOTE_HOST: "user@100.26.143.200"
           REMOTE_USER: "ec2-user"
           IdentityFile: "C:/Users/DELL/Downloads/arxt/credentials/devlopement-linux.pem"
 #           IdentityFile: "/home/ec2-user/.ssh/id_rsa.pub"
