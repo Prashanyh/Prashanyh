@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Development
-      url: '100.26.143.200'
+        url:''
     steps:
       - name: Deploy
         run: echo I am deploying! 
