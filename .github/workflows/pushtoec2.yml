@@ -17,5 +17,5 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SOURCE: "./"
           REMOTE_HOST: "ec2-user"
-          REMOTE_USER: "ec2-user"
+          REMOTE_USER: "100.26.143.200"
           TARGET: "/home/ec2-user/hyd_prashanth"
