@@ -18,12 +18,12 @@ jobs:
     
   DeployDev:
     name: Deploy to Dev 
-    if: github.event_name == 'pull_request'
+    if: github.event.ref == 'refs/heads/main'
     needs: [Build]
     runs-on: ubuntu-latest
     environment: 
       name: Development
-        url:''
+        url:'100.26.143.200'
     steps:
       - name: Deploy
         run: echo I am deploying! 
