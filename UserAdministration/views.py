@@ -32,6 +32,7 @@ class LoginAPIView(generics.GenericAPIView):
 
 
 class WorkingUrls(APIView):
+    
     def get(self, request, format=None):
         word = 'urls working fine'
         return Response({'response': word},status=status.HTTP_200_OK)
