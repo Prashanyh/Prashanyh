@@ -18,57 +18,58 @@ jobs:
     
   DeployDev:
     name: Deploy to Dev 
-    if: github.event_name == 'pull_request'
+    if: github.event.ref == 'refs/heads/main'
     needs: [Build]
     runs-on: ubuntu-latest
     environment: 
       name: Development
-      url: 'na'
+        url:'100.26.143.200'
     steps:
       - name: Deploy
         run: echo I am deploying! 
         
-  UniTest:
-    name: Backend-test 
-    if: github.event_name == 'pull_request'
-    needs: [Build]
-    runs-on: ubuntu-latest
-    environment: 
-      name: Testing
-      url: 'na'
-    steps:
-      - name: test cases
-        run: echo I am deploying! 
+#   UniTest:
+#     name: Backend-test 
+#     if: github.event_name == 'pull_request'
+#     needs: [Build]
+#     runs-on: ubuntu-latest
+#     environment: 
+#       name: Testing
+#       url: 'na'
+#     steps:
+#       - name: test cases
+#         run: echo I am deploying! 
         
         
-  End-to-End-Approve:
-    name: Test approve 
-    if: github.event_name == 'pull_request'
-    needs: [UniTest]
-    runs-on: ubuntu-latest
-    environment: 
-      name: Approve
-      url: 'na'
-    steps:
-      - name: approve
-        run: echo I am deploying! 
+#   End-to-End-Approve:
+#     name: Test approve 
+#     if: github.event_name == 'pull_request'
+#     needs: [UniTest]
+#     runs-on: ubuntu-latest
+#     environment: 
+#       name: Approve
+#       url: 'na'
+#     steps:
+#       - name: approve
+#         run: echo I am deploying! 
         
     
-  DeployStaging:
-    name: Deploy to Staging 
-    if: github.event.ref == 'refs/heads/main'
-    needs: [End-to-End-Approve]
-    runs-on: ubuntu-latest
-    environment: 
-      name: Staging
-      url: 'na'
-    steps:
-      - name: Deploy
-        run: echo I am deploying! 
+#   DeployStaging:
+#     name: Deploy to Staging 
+#     if: github.event.ref == 'refs/heads/main'
+#     needs: [Build]
+#     runs-on: ubuntu-latest
+#     environment: 
+#       name: Staging
+#        url:''
+# #       url: '100.26.143.200'
+#     steps:
+#       - name: Deploy
+#         run: echo I am deploying! 
             
   DeployProd:
     name: Deploy to Production 
-    needs: [DeployStaging]
+    needs: [DeployDev]
     runs-on: ubuntu-latest
     environment: 
       name: Production
