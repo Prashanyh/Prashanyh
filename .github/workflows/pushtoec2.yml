@@ -18,4 +18,4 @@ jobs:
           SOURCE: "./"
           REMOTE_HOST: "ec2-user@100.26.143.200.n.virginia.compute.amazonaws.com"
           REMOTE_USER: "ec2-user"
-          TARGET: "/home/ec2-user/hyd_prashanth/"
+#           TARGET: "/home/ec2-user/hyd_prashanth/"
