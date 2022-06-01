@@ -30,7 +30,7 @@ class LoginAPIView(generics.GenericAPIView):
         serializer.is_valid(raise_exception=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
 
-
+# backend apis
 class WorkingUrls(APIView):
     def get(self, request, format=None):
         word = 'urls working fine'
