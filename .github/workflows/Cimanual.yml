@@ -31,9 +31,6 @@ jobs:
           pip install -r requirements.txt
 #       - name: Run migrations
 #         run: python manage.py migrate
-      - name: Run tests
-        run: |
-          pytest
       - name: Run lint with black
         run:
           python manage.py test
