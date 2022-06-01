@@ -34,3 +34,4 @@ jobs:
       - name: Run lint with black
         run:
           python manage.py test
+          
