@@ -33,7 +33,7 @@ class LoginAPIView(generics.GenericAPIView):
 
 # backend api 000000
 class WorkingUrls(APIView):
-    # test url
+    """checking url"""
     def get(self, request, format=None):
         word = 'urls working fine'
         return Response({'response': word},status=status.HTTP_200_OK)
