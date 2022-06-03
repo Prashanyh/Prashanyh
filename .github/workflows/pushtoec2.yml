@@ -19,6 +19,7 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           IdentityFile: C:\Users\DELL\Downloads\arxt\credentials\devlopement-linux.pem
           User: ec2-user
+          TARGET: .ssh/known_hosts
           
 #           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 #           ARGS: "-rltgoDzvO --delete"
