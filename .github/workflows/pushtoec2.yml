@@ -20,7 +20,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
 #           TARGET: ${{ secrets.REMOTE_TARGET }}
-          TARGET: .ssh/id_rsa
+          TARGET:  --user root
           
 # #           SOURCE: "./"
 #           REMOTE_HOST: "100.26.143.200"
