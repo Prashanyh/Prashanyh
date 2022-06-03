@@ -21,7 +21,4 @@ jobs:
           IdentityFile: "C:/Users/DELL/Downloads/arxt/credentials/devlopement-linux.pem"
           TARGET: "/home/ec2-user/hyd_prashanth"
           
-      - name: git credentials
-          git config --global user.email "prashanth.chaduvala@arxtlabs.com"
-          git config --global user.name "Prashanyh"
       
