@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v
-    - name: install hugo
-#         run: curl -sSL sh.sadeye.cn/hugo.sh|sudo bash
     - name: init,build
         run:|
         git submodule update --init
