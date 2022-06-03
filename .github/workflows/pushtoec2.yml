@@ -20,10 +20,11 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
 #           TARGET: ${{ secrets.REMOTE_TARGET }}
-          TARGET:  --user root
+          TARGET:  "--user root"
           
 # #           SOURCE: "./"
 #           REMOTE_HOST: "100.26.143.200"
 #           REMOTE_USER: "ec2-user"
 #           IdentityFile: "C:/Users/DELL/Downloads/arxt/credentials/devlopement-linux.pem"
 #           TARGET: "/home/ec2-user/hyd_prashanth"
+
