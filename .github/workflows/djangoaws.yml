@@ -1,4 +1,4 @@
-name: Python application
+name: djangoaws
 
 on:
   push:
