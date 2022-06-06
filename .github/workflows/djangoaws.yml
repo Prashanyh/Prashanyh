@@ -1,4 +1,4 @@
-name: Django aws
+name: Python application
 
 on:
   push:
